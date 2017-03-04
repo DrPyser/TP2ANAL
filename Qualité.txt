@@ -1,0 +1,11 @@
+Couplage et cohésion
+
+
+Fardeau des classes
+
+
+Graphe IA, justification
+
+
+Principes de conception
+

@@ -1,0 +1,8 @@
+
+//Le port d'arrivée est le même que le port de départ
+Context Route inv:
+ self.startPoint == self.endPoint
+
+//Un paquebot peut être assigné à plusieurs itinéraires tant qu'ils ne se chevauchent pas.
+Context Boat inv:
+ 
