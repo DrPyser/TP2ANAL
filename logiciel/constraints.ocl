@@ -1,0 +1,13 @@
+context CruiseItinerary:
+inv circle: self.nodes->at(1) = self.nodes->at(self.nodes->size())
+
+context CruiseItinerary:
+inv overlap: CruiseItinerary.allInstances->forAll(it : Itinerary |
+    if it.transport = self.transport
+    then self.departureTime > it.arrivalTime Or self.arrivalTime < it.departureTime
+)
+
+-- Le choix du siège à réserver
+context System::reserve(itinerary : string, parameters : ReservationParameters): Unit
+post: result.status = SeatStatusType.reserved
+
